@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAURAV'S PERSONAL SITE</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Welcome</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Gaurav Bassi</h2>
+        <a href="#sec" id="btn">More</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Information Abount Hacker :</h2>
+        <p>A hacker is a person skilled in information technology who uses their technical knowledge to achieve a goal or overcome an
+           obstacle, within a computerized system by non-standard means. Though the term hacker has become associated in popular culture
+           with a security hacker – someone who utilizes their technical know-how of bugs or exploits to break into computer systems
+           and access data which would otherwise be inaccessible to them – hacking can also be utilized by legitimate figures in legal
+           situations. For example, law enforcement agencies sometimes use hacking techniques in order to collect evidence on
+           criminals and other malicious actors. This could include using anonymity tools (such as a VPN, or the dark web) to mask
+           their identities online, posing as criminals themselves. Likewise, covert world agencies can employ hacking techniques 
+           in the legal conduct of their work. On the other hand, hacking and cyber-attacks are used extra- and illegally by law
+           enforcement and security agencies (conducting warrantless activities), and employed by state actors as a weapon of 
+           both legal and illegal. <br><br>A security hacker is someone who explores methods for breaching defenses and exploiting
+           weaknesses in a computer system or network. Hackers may be motivated by a multitude of reasons, such as profit, protest, 
+           information gathering, challenge, recreation, or evaluation of a system weaknesses to assist in formulating defenses against
+           potential hackers. <br><br>Longstanding controversy surrounds the meaning of the term "hacker." In this controversy,
+           scammers reclaim the term hacker, arguing that it refers simply to someone with an advanced understanding of computers
+           and computer networks, and that cracker is the more appropriate term for those who break into computers, whether 
+           computer criminals (black hats) or computer security experts (white hats). A 2014 article noted that "the black-hat 
+           meaning still prevails among the general public. The subculture that has evolved around hackers is often referred 
+           to as the "computer underground".</p>
+
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.25 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.Top = value * 2 + 'px';
+         })
+    </script>
+    
+</body>
+</html>
